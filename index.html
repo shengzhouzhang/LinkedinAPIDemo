@@ -1,29 +1,6 @@
 <!doctype html>
 <html>
   <head>
-    <script type="text/javascript" src="http://platform.linkedin.com/in.js">
-      api_key: 75eym30rv08bvx 
-      onLoad: onLinkedInLoad
-      authorize: true
-      scope: r_basicprofile r_network
-    </script>
-    <script src="http://fb.me/react-0.10.0.js"></script>
-    <script src="http://fb.me/JSXTransformer-0.10.0.js"></script>
-    <script type="text/javascript">
-      function onLinkedInLoad() {
-           // Listen for an auth event to occur
-           IN.Event.on(IN, "auth", onLinkedInAuth);
-      }
-       
-      function onLinkedInAuth() {
-        IN.API.Connections("me")
-          .result(function(data){
-            console.log(data);
-          });
-      }
-       
-      
-      </script>
   </head>
 <body>
 <script type="in/Login"></script>
