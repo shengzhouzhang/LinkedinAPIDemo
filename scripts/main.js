@@ -1,8 +1,13 @@
-require(["jquery", "react", "jsx!HelloWorld"], function($, React, HelloWorld) {
+require(["jquery", "jsx!Connections", "./LinkedAPI"], function($, Connections, API) {
 	
-	React.renderComponent(
-		<HelloWorld />, 
-		document.body
-	);
+	IN.Event.on(IN, "auth", function() {
+		API.connections(function(connections) {
+			console.log(connections);
+			Connections.render(connections, document.body);
+		});
+	});
+
+	
+	
  });
 
