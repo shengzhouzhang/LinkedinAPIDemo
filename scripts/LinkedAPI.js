@@ -8,9 +8,10 @@ define(['linkedin'], function(Linkedin) {
 	var API = {
 		connections: function(cb) {
 			IN.API.Connections("me")
-	          .result(function(data) {
-	          	cb(data.values)
-	          });
+				.fields(['picture-url', 'first-name', 'last-name', 'positions', 'location:(name)'])
+				.result(function(data) {
+					cb(data.values)
+				});
 		}
 	};
 

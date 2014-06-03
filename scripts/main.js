@@ -6,8 +6,5 @@ require(["jquery", "jsx!Connections", "./LinkedAPI"], function($, Connections, A
 			Connections.render(connections, document.body);
 		});
 	});
-
-	
-	
  });
 
